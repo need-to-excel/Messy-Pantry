@@ -6,7 +6,7 @@ var queryURL = "https://api.giphy.com/v1/gifs/random?tag=wine&api_key=" + "0qKmN
       return response.json();
     })
     .then(function (data) {
-      console.log(data.bitly_gif_url);
+      console.log(data.data.bitly_url);
     //   var url = (data.images);
     //   console.log(url)
 });
