@@ -90,3 +90,32 @@ h3 {
     border-radius: 20px;
 }
 
+.two-column-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 30px;
+}
+
+.search-column {
+    background-color: #6f3841;
+    padding: 20px;
+    color: white;
+    border-radius: 20px;
+    border-right: 2px solid white;
+    margin-right: 30px;
+}
+
+.meal-column {
+    background-color: #6f3841;
+    padding: 20px;
+    color: white;
+    border-radius: 20px;
+    border-left: 2px solid white;
+}
+
+.search-column h3,
+.meal-column h3 {
+    color: white;
+}
