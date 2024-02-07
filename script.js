@@ -42,7 +42,6 @@ fetch(queryURL)
         }
         console.log(mealdata); 
         // console.log(data)  
-const WidgetContainer = document.querySelector(".widgets")
         for(index = 0; index < mealdata.length; index ++) {
             // WidgetContainer.innerHTML += `<img src="${mealdata[index]}" class="img-fluid" alt="...">`
         }
@@ -60,3 +59,35 @@ const WidgetContainer = document.querySelector(".widgets")
       console.log(mealInput)
       getMeal(mealInput);
       });
+
+function updateSearchHistory(mealInput) {
+  var searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+  searchHistory = searchHistory.slice(0, 8);
+  
+  {
+    name: mealInput.name
+  }
+
+  localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+
+  // Update the search history display on the website
+  var historyContainer = $('#history');
+  historyContainer.empty();
+  searchHistory.forEach(function (search) {
+    // Create a button element for each search history item
+    var historyItem = $('<button class="btn btn-secondary m-1 history-item">');
+    historyItem.text(search);
+    historyItem.on('click', function () {
+      updateMeal(search);
+    });
+    historyContainer.append(historyItem);
+  });
+
+}
+
+function updateMeal(mealInput) {
+  var currentMealURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
+}
+
+// needs to be inside a function 
+//updateSearchHistory(mealInput);
