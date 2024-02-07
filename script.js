@@ -8,21 +8,26 @@ var getMeal = function(mealInput) {
       return response.json();
     })
     .then(function (data) {
-      console.log(data.bitly_gif_url);
+      var gif = data.data.bitly_url
+      console.log(gif)
+      var gif = document.querySelector(".widgets")
+      
+      
+
     //   var url = (data.images);
     //   console.log(url)
 });
-var apiKey = "d152576e58714ab5ba4e89d5f0607368"
-var queryURL = "https://api.spoonacular.com/recipes/complexSearch?query=chicken&apiKey=" + "d152576e58714ab5ba4e89d5f0607368";
+// var apiKey = "d152576e58714ab5ba4e89d5f0607368"
+var queryURL = "https://api.spoonacular.com/recipes/complexSearch?query=" + mealInput + "&apiKey=" + "bfd706e871964d61a15838d7eeed9bdf";
 fetch(queryURL)
     .then(function (response) {
         return response.json();
     })
     .then(function (data) {
         var mealdata = []
-        for(index = 0; index < data.results.length; index++){
+        for(index = 0; index < 3; index++){
             // mealIds.push(data.results[index].id)
-            var queryURL = "https://api.spoonacular.com/recipes/" + data.results[index].id + "/card?apiKey=" + "d152576e58714ab5ba4e89d5f0607368";
+            var queryURL = "https://api.spoonacular.com/recipes/" + data.results[index].id + "/card?apiKey=" + "bfd706e871964d61a15838d7eeed9bdf";
             fetch(queryURL)
                 .then(function (response) {
                     return response.json();
@@ -31,7 +36,7 @@ fetch(queryURL)
                     mealdata.push(data.url)
                     WidgetContainer.innerHTML += `<img src="${data.url}" class="img-fluid" alt="...">`                  
                 
-                    console.log(data); 
+                    // console.log(data); 
                     
                 }); 
         }
@@ -44,7 +49,7 @@ const WidgetContainer = document.querySelector(".widgets")
     });
 
 }
-getMeal()
+// getMeal()
 
 
 
