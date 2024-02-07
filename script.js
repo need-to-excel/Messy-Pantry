@@ -25,6 +25,8 @@ fetch(queryURL)
     })
     .then(function (data) {
         var mealdata = []
+        const WidgetContainer = document.querySelector(".widgets")
+        WidgetContainer.innerHTML = " "
         for(index = 0; index < 3; index++){
             // mealIds.push(data.results[index].id)
             var queryURL = "https://api.spoonacular.com/recipes/" + data.results[index].id + "/card?apiKey=" + "bfd706e871964d61a15838d7eeed9bdf";
@@ -58,15 +60,17 @@ fetch(queryURL)
       var mealInput = $("#search-input").val().trim()
       console.log(mealInput)
       getMeal(mealInput);
+      updateSearchHistory(mealInput);
       });
 
 function updateSearchHistory(mealInput) {
   var searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
-  searchHistory = searchHistory.slice(0, 8);
-  
-  {
-    name: mealInput.name
-  }
+  searchHistory = searchHistory.slice(0, 4);
+  searchHistory.push(mealInput)
+  console.log(searchHistory)
+ // {
+  //  name: mealInput.name
+ // }
 
   localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
 
@@ -90,4 +94,3 @@ function updateMeal(mealInput) {
 }
 
 // needs to be inside a function 
-//updateSearchHistory(mealInput);
