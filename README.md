@@ -12,7 +12,15 @@ I think that this project makes us standout because we have had a fun spin on a 
 
 ## Installation 
 
-Use the deployed URL at the top of the page and open up to the landing page. If you are in Github this will be a link in the README.md file. If on you code editor go to the readme file and click the link to take you to the website. 
+Use the deployed URL at the top of the page and open up to the landing page. Which should look like the below: 
+
+assets/Screenshot 2024-02-08 at 16.19.46.png 
+
+If you are in Github this will be a link in the README.md file. If on you code editor go to the readme file and click the link to take you to the website. 
+
+After you've loaded the page you can use the search bar to take you to the second page, demonstated below:
+
+assets/Screenshot 2024-02-08 at 16.20.15.png 
 
 ## Usage 
 
