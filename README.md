@@ -16,7 +16,7 @@ This should be used for when inspiration is low for food, when you want a great 
 
 ## Installation 
 
-To access the deployed application head to
+To access the deployed application head to https://need-to-excel.github.io/Messy-Pantry/
 
 ## Instructions
 
@@ -24,27 +24,28 @@ To use the application, follow these steps:
 
 1. Open the deployed application on the link provided above which will look like the following
 
-![screenshot](url)
+![screenshot](https://raw.githubusercontent.com/need-to-excel/Messy-Pantry/main/assets/main-page.png)
 
 2. Use the search bar to type an ingredient or meal name and click Search
 
-![screenshot](url)
+![screenshot](https://raw.githubusercontent.com/need-to-excel/Messy-Pantry/main/assets/search-recipe.png)
 
 3. On the Meals column, you will be presented with meal options, as well as ingredients and step-by-step instructions on how to prepare it
 
-![screenshot](url)
+![screenshot](https://raw.githubusercontent.com/need-to-excel/Messy-Pantry/main/assets/meal-instructions.png)
 
 4. Right below, on the wine pairing section, you will be presented with a wine pairing option, perfect for the meal you're preparing and a GIF, to make your life more fun!
 
-![screenshot](url)
+![screenshot](https://raw.githubusercontent.com/need-to-excel/Messy-Pantry/main/assets/wine-pairing.png)
 
 5. On the left-side column you can see your previously searched recipes so that you have easy access if you need to go back to your most favourite meals!
-![screenshot](url)
+
+![screenshot](https://raw.githubusercontent.com/need-to-excel/Messy-Pantry/main/assets/search-history.png)
 
 ## Credits 
 
-Rustam Abdumavlyanov
-Jessica Santos 
-Hannah Hazel 
+- Rustam Abdumavlyanov
+- Jessica Santos 
+- Hannah Hazel 
 
 
