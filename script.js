@@ -89,8 +89,8 @@ function updateSearchHistory(mealInput) {
 
 }
 
-function updateMeal(mealInput) {
-  var currentMealURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
-}
+//function updateMeal(mealInput) {
+  //var currentMealURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
+//}
 
 // needs to be inside a function 
