@@ -38,7 +38,6 @@
   </div>
 
     <!-- Landing and Grid -->
-    <h3>FEATURED RECIPES</h3>
 
     <div class="grid-container">
       <div class="grid-item"><img
@@ -53,22 +52,28 @@
           alt="Meal 4" /></div>
     </div>
 
-      <!-- Main page -->
+  <!-- column grid -->
+<div class="three-column-grid">
 
-    <!-- Two-column layout -->
-    <div class="two-column-grid">
+  <!-- search history -->
+  <div class="search-column">
+      <h2>Search History</h2>
+      <div id="history"></div>
+  </div>
+  
+  <!-- meal results (top) -->
+  <div class="meal-column">
+      <h2>Meals</h2>
+      <div class="widgets"></div>
+  </div>
 
-      <!-- Left column for search history -->
-      <div class="search-column">
-          <h3>Search History</h3>
-          <div id="history"></div>
-      </div>
-      <!-- Right column for search results -->
-      <div class="meal-column">
-          <h3>Search Results</h3>
-          <div class="widgets"></div>
+  <!-- wine pairing (bottom) -->
+  <div class="meal-column">
+      <h2>Wine pairing</h2>
+      <div class="wine">
       </div>
   </div>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
