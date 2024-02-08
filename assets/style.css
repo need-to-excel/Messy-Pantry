@@ -4,7 +4,8 @@
 }
 
 .p-5,
-.hero-text, h2 {
+.hero-text,
+h2 {
     font-family: 'Bebas Neue', sans-serif;
 }
 
@@ -29,12 +30,13 @@
 
 .hero-text {
     font-size: 60px;
-    margin-left: 500px;
-    margin-right: 500px;
+    margin-left: 400px;
+    margin-right: 400px;
+    text-align: center;
 }
 
 .hero-subtitle {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
     margin-bottom: 50px;
 }
@@ -90,6 +92,8 @@ h2 {
     border-radius: 20px;
 }
 
+/* main columns */
+
 .three-column-grid {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -126,4 +130,41 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
+}
+
+/* media queries */
+
+@media (max-width: 1200px) {
+    .hero-text {
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text {
+        font-size: 40px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 430px) {
+    .hero-text {
+        font-size: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
