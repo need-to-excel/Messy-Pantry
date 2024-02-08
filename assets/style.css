@@ -4,8 +4,7 @@
 }
 
 .p-5,
-.hero,
-h3 {
+.hero-text, h2 {
     font-family: 'Bebas Neue', sans-serif;
 }
 
@@ -35,6 +34,7 @@ h3 {
 }
 
 .hero-subtitle {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
     margin-bottom: 50px;
 }
@@ -60,9 +60,9 @@ h3 {
     font-size: 16px;
 }
 
-/* Landing grid */
+/* landing grid */
 
-h3 {
+h2 {
     text-align: left;
     margin-left: 50px;
     margin-top: 50px;
@@ -90,20 +90,22 @@ h3 {
     border-radius: 20px;
 }
 
-.two-column-grid {
+.three-column-grid {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto;
     padding: 20px;
     border-radius: 20px;
     margin: 30px;
 }
 
 .search-column {
+    grid-column: 1;
+    grid-row: span 2;
     background-color: #6f3841;
     padding: 20px;
     color: white;
     border-radius: 20px;
-    border-right: 2px solid white;
     margin-right: 30px;
 }
 
@@ -112,10 +114,16 @@ h3 {
     padding: 20px;
     color: white;
     border-radius: 20px;
-    border-left: 2px solid white;
+    margin-bottom: 30px;
 }
 
-.search-column h3,
-.meal-column h3 {
+.search-column h2,
+.meal-column h2 {
     color: white;
+}
+
+.new-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
 }
