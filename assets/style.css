@@ -1,19 +1,129 @@
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 20px;
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('assets/BebasNeue-Regular.ttf');
 }
 
-.meal-column {
-    background-color: #ff556a;
+.p-5,
+.hero-text, h2 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Header */
+.p-5 {
+    position: relative;
+    z-index: 1;
+    margin-left: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Hero section */
+.hero {
+    margin-top: 30px;
+}
+
+.hero-text {
+    font-size: 60px;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+.hero-subtitle {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.hero-search {
+    margin-bottom: 30px;
+}
+
+.hero-search input[type="search"] {
+    width: 300px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background-color: white;
+    font-size: 16px;
+}
+
+.hero-search button[type="button"] {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* landing grid */
+
+h2 {
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+.grid-item {
+    height: 300px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.three-column-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto;
     padding: 20px;
-    border-radius: 8px;
-    color: white;
+    border-radius: 20px;
+    margin: 30px;
 }
 
 .search-column {
-    background-color: #ff556a;
+    grid-column: 1;
+    grid-row: span 2;
+    background-color: #6f3841;
     padding: 20px;
-    border-radius: 8px;
     color: white;
+    border-radius: 20px;
+    margin-right: 30px;
+}
+
+.meal-column {
+    background-color: #6f3841;
+    padding: 20px;
+    color: white;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.search-column h2,
+.meal-column h2 {
+    color: white;
+}
+
+.new-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
 }

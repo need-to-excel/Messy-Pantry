@@ -9,41 +9,71 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <title>Document</title>
+    <title>Messy Pantry - Where recipes meet perfect wine pairings!</title>
   </head>
 
   <body>
-    <!-- Jumbotron for Title -->
-    <div class="p-5 mb-4 rounded-3">
-      <div class="container-fluid py-5">
-        <h1 id="message" class="display-5 text-center fw-bold">
-          <i class="title"></i> Messy Pantry
-        </h1>
-        <h2>
-          <i class="subtitle"></i> Where recipes meet perfect wine pairings!
-        </h2>
-      </div>
+  <!-- Header -->
+  <div class="p-5 mb-4 rounded-3">
+    <div class="container-fluid py-5">
+      <h1 id="message" class="display-5 text-center fw-bold">
+        <i class="title"></i> MESSY PANTRY</h1>
     </div>
+  </div>
 
   <div class="container mt-5">
+
+    <!-- Hero section -->
+    <div class="hero text-center">
+      <h2 class="hero-text">WHERE RECIPES MEET PERFECT WINE PAIRING</h2>
+      <p class="hero-subtitle hero-text">Date night? Not sure what to cook and what wine to serve? <b>We're here for
+          you!</b> <br>Type in a meal name below and hit search to get an exclusive recipe and wine pairing
+        recommendation</p>
+      <div class="hero-search">
+        <input type="search" class="form-control rounded" id="search-input" placeholder="Meal name" aria-label="Search"
+          aria-describedby="search-addon" />
+        <button type="button" class="btn btn-outline-primary" id="search-button" data-mdb-ripple-init>Search</button>
+      </div>
+    </div>
+  </div>
+
+    <!-- Landing and Grid -->
+
     <div class="grid-container">
-
-      <!-- Small Column on the Left -->
-      <div class="search-column">
-        <h2>Search</h2>
-        <div class="input-group">
-          <input type="search" class="form-control rounded" id="search-input" placeholder="Search" aria-label="Search"
-            aria-describedby="search-addon" />
-          <button type="button" class="btn btn-outline-primary" id="search-button" data-mdb-ripple-init>search</button>
-        </div>
-        <div id="history"> </div>
+      <div class="grid-item"><img
+          src="https://raw.githubusercontent.com/need-to-excel/Messy-Pantry/main/assets/pasta.jpeg"
+          alt="Meal 1" /></div>
+      <div class="grid-item"><img
+          src="https://raw.githubusercontent.com/need-to-excel/Messy-Pantry/main/assets/fish.jpeg" alt="Meal 2" />
       </div>
+      <div class="grid-item"><img src="https://raw.githubusercontent.com/need-to-excel/Messy-Pantry/main/assets/steak.jpeg"
+          alt="Meal 3" /></div>
+      <div class="grid-item"><img src="https://raw.githubusercontent.com/need-to-excel/Messy-Pantry/main/assets/rice.jpeg"
+          alt="Meal 4" /></div>
+    </div>
 
-      <!-- Wide Column on the Right -->
-      <div class="meal-column">
-        <h2>Meal</h2>
-        <div class=" widgets"></div>
+  <!-- column grid -->
+<div class="three-column-grid">
+
+  <!-- search history -->
+  <div class="search-column">
+      <h2>Search History</h2>
+      <div id="history"></div>
+  </div>
+  
+  <!-- meal results (top) -->
+  <div class="meal-column">
+      <h2>Meals</h2>
+      <div class="widgets"></div>
+  </div>
+
+  <!-- wine pairing (bottom) -->
+  <div class="meal-column">
+      <h2>Wine pairing</h2>
+      <div class="wine">
       </div>
+  </div>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

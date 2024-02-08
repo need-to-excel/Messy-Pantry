@@ -8,17 +8,14 @@ var getMeal = function(mealInput) {
       return response.json();
     })
     .then(function (data) {
-      var gif = data.data.bitly_url
-      console.log(gif)
-      var gif = document.querySelector(".widgets")
-      
-      
-
-    //   var url = (data.images);
-    //   console.log(url)
+      var gif = data.data.images.downsized.url
+      console.log(data)
+      const gifImage = document.querySelector(".search-column")
+      gifImage.innerHTML += `<img src="${gif}" class="img-fluid" alt="...">` 
+    
 });
 // var apiKey = "d152576e58714ab5ba4e89d5f0607368"
-var queryURL = "https://api.spoonacular.com/recipes/complexSearch?query=" + mealInput + "&apiKey=" + "bfd706e871964d61a15838d7eeed9bdf";
+var queryURL = "https://api.spoonacular.com/recipes/complexSearch?query=" + mealInput + "&apiKey=" + "f0a28ce8eeb940948187c66790d305f0";
 fetch(queryURL)
     .then(function (response) {
         return response.json();
@@ -29,7 +26,7 @@ fetch(queryURL)
         WidgetContainer.innerHTML = " "
         for(index = 0; index < 3; index++){
             // mealIds.push(data.results[index].id)
-            var queryURL = "https://api.spoonacular.com/recipes/" + data.results[index].id + "/card?apiKey=" + "bfd706e871964d61a15838d7eeed9bdf";
+            var queryURL = "https://api.spoonacular.com/recipes/" + data.results[index].id + "/card?apiKey=" + "f0a28ce8eeb940948187c66790d305f0";
             fetch(queryURL)
                 .then(function (response) {
                     return response.json();
@@ -45,17 +42,45 @@ fetch(queryURL)
         console.log(mealdata); 
         // console.log(data)  
         for(index = 0; index < mealdata.length; index ++) {
-            // WidgetContainer.innerHTML += `<img src="${mealdata[index]}" class="img-fluid" alt="...">`
         }
-    });
+        var winePar = "https://api.spoonacular.com/recipes/" + data.results[index].id + "/information?apiKey=" + "f0a28ce8eeb940948187c66790d305f0";
+            fetch(winePar)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                  console.log(data.winePairing.pairingText)
+                  var wineChoice = data.winePairing.pairingText
+                  var wineText = $("h5")
+                  wineText.attr("h5", wineChoice)
+                  $(".search-column").append(wineChoice)
+                    // mealdata.push(data.url)
+                    // WidgetContainer.innerHTML += `<img src="${data.url}" class="img-fluid" alt="...">`                  
+                
+                    // console.log(data); 
+                    
+                }); 
+  });
+
+  // var wineParing = "https://api.spoonacular.com/recipes/" + data.results[index].id + "/information?apiKey=" + "f0a28ce8eeb940948187c66790d305f0";
+  //           fetch(wineParing)
+  //               .then(function (response) {
+  //                   return response.json();
+  //               })
+  //               .then(function (data) {
+  //                 console.log(data)
+  //                   // mealdata.push(data.url)
+  //                   // WidgetContainer.innerHTML += `<img src="${data.url}" class="img-fluid" alt="...">`                  
+                
+  //                   // console.log(data); 
+                    
+  //               }); 
+
+
 
 }
-// getMeal()
 
-
-
-
-    $("#search-button").on("click", function(event) {
+$("#search-button").on("click", function(event) {
         event.preventDefault();
       var mealInput = $("#search-input").val().trim()
       console.log(mealInput)
@@ -68,9 +93,6 @@ function updateSearchHistory(mealInput) {
   searchHistory = searchHistory.slice(0, 4);
   searchHistory.push(mealInput)
   console.log(searchHistory)
- // {
-  //  name: mealInput.name
- // }
 
   localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
 
@@ -89,8 +111,6 @@ function updateSearchHistory(mealInput) {
 
 }
 
-//function updateMeal(mealInput) {
-  //var currentMealURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
-//}
+
 
 // needs to be inside a function 
